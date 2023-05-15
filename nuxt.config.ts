@@ -2,8 +2,17 @@
 export default defineNuxtConfig({
   css: ["@/assets/app.scss"],
   modules: [
-    "@pinia/nuxt"
+    [
+      "@pinia/nuxt",
+      {
+        autoImports: ["defineStore"],
+      }
+    ],
+    "nuxt-icons"
   ],
+  imports: {
+    dirs: ["stores"],
+  },
   vite: {
     css: {
       preprocessorOptions: {
