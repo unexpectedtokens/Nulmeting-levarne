@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif; // Globale font definitie
+  margin: 0;
+}
+
+// Global .element-wrapper & .element styling (defines responsiveness of page elements)
+.element-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  > .element-fluid {
+    margin: 0 $container-margin-medium;
+    max-width: $container-width-dashboard;
+  }
+}
+
+// Default, desktop view
+@include desktop {
+  .element-wrapper {
+    > .element-body {
+      margin: auto;
+      width: $container-width-large;
+    }
+  }
+}
+
+@include laptop {
+  .element-wrapper {
+    > .element-body {
+      margin: 0 $container-margin-large;
+      width: 100%;
+    }
+  }
+}
+
+@include tablet-medium {
+  .element-wrapper {
+    > .element-body {
+      margin: auto;
+      width: $container-width-small;
+    }
+  }
+}
+
+@include tablet-small {
+  .element-wrapper {
+    > .element-body {
+      margin: 0 $container-margin-medium;
+      width: 100%;
+    }
+  }
+}
+
+@include mobile {
+  .element-wrapper {
+    > .element-body {
+      margin: 0 $container-margin-small;
+      width: 100%;
+    }
+    > .element-fluid {
+      margin: 0 $container-margin-small;
+    }
+  }
+}
