@@ -3,6 +3,7 @@
     <slot></slot>
   </button>
 </template>
+
 <style lang="scss" scoped>
 button {
   padding: 8px 16px;
@@ -12,7 +13,7 @@ button {
   background-color: #175dc7;
   cursor: pointer;
   &:hover {
-    background-color: #124da4
+    background-color: #124da4;
   }
 }
 </style>

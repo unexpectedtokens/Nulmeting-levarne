@@ -5,10 +5,10 @@ export default defineNuxtConfig({
     [
       "@pinia/nuxt",
       {
-        autoImports: ["defineStore"],
-      }
+        autoImports: ["defineStore", "storeToRefs"],
+      },
     ],
-    "nuxt-icons"
+    "nuxt-icons",
   ],
   imports: {
     dirs: ["stores"],
@@ -17,10 +17,15 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData:
-            '@use "@/assets/_breakpoints.scss" as *;',
+          additionalData: '@use "@/assets/_breakpoints.scss" as *;',
         },
       },
     },
-  }
+  },
+  runtimeConfig: {
+    public: {
+      api_url: process.env.API_URL,
+      api_token: process.env.API_TOKEN,
+    },
+  },
 });

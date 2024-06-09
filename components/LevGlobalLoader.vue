@@ -1,9 +1,9 @@
 <template>
-  <div class="loader"> 
-    <nuxt-icon name="levarne" filled></nuxt-icon>
+  <div class="loader">
+    <NuxtIcon name="levarne" filled></NuxtIcon>
   </div>
 </template>
-  
+
 <style lang="scss" scoped>
 .loader {
   position: fixed;
@@ -14,7 +14,7 @@
   top: 0;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255, 255, 255, 0.702);
   z-index: 9999;
   & .nuxt-icon {
     animation: rotation 2.5s infinite;
